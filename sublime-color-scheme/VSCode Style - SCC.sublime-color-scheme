@@ -1,0 +1,324 @@
+//Storage type: function 语句
+//Variable: 全局变量
+//Comment: 注释颜色
+//Function name: 函数名称
+//Function argument: 函数名称参数部分
+//Function call: 被调用函数部分，实际作用于除定义之外的生成函数结果的地方
+//Library function: 库函数，实际作用于.random和print这样的地方
+//Library constant: 库常量部分，实际作用于像math.部分这样的地方
+
+{
+    "name": "VSCode Style - Imitation",
+    "author": "Sublime HQ Pty Ltd, Wimer Hazenberg",
+    "variables":
+    {
+        "black": "rgb(0, 0, 0)",
+        "black2": "rgb(33, 33, 24)",
+        "black3": "rgb(41, 42, 36)",
+        "blue": "rgb(103, 217, 240)",
+        "grey": "rgb(72, 71, 61)",
+        "orange": "rgb(253, 151, 33)",
+        "orange2": "rgb(159, 87, 15)",
+        "orange3": "rgb(255, 232, 148)",
+        "purple": "rgb(173, 128, 255)",
+        "purple2": "rgb(197, 134, 192)",
+        "red": "rgb(248, 54, 54)",
+        "red2": "rgb(250, 37, 115)",
+        "white": "rgb(248, 248, 248)",
+        "white2": "rgb(249, 249, 242)",
+        "white3": "rgb(248, 248, 242)",
+        "yellow": "rgb(255, 255, 153)",
+        "green": "rgb(166, 227, 45)",
+        "green2": "rgb(58, 184, 0)",
+        "yellow3": "rgb(208, 208, 196)",
+        "yellow4": "rgb(63, 62, 50)",
+        "yellow5": "rgb(117, 113, 94)"
+    },
+    "globals":
+    {
+        "foreground": "var(white3)",
+        "background": "var(black3)",
+        "caret": "color(var(white2) alpha(0.9))",
+        "block_caret": "color(var(white2) alpha(0.4))",
+        "invisibles": "color(var(white3) alpha(0.35))",
+        "line_highlight": "var(yellow4)",
+        "selection": "var(grey)",
+        "selection_border": "var(black2)",
+        "misspelling": "var(red2)",
+        "active_guide": "color(var(orange2) alpha(0.69))",
+        "find_highlight_foreground": "var(black)",
+        "find_highlight": "var(orange3)",
+        "brackets_options": "underline",
+        "brackets_foreground": "color(var(white3) alpha(0.65))",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "color(var(white3) alpha(0.65))",
+        "tags_options": "stippled_underline"
+    },
+    "rules":
+    [
+        {
+            "name": "Comment",//注释
+            "scope": "comment",
+            "foreground": "var(green2)"
+        },
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric",
+            "foreground": "var(purple)"
+        },
+        {
+            "name": "Built-in constant",
+            "scope": "constant.language",
+            "foreground": "var(purple)"
+        },
+        {
+            "name": "User-defined constant",
+            "scope": "constant.character, constant.other",
+            "foreground": "var(purple)"
+        },
+        {
+            "name": "Variable",//全局变量
+            "scope": "variable"
+        },
+        {
+            "name": "Keyword",
+            "scope": "keyword - (source.c keyword.operator | source.c++ keyword.operator | source.objc keyword.operator | source.objc++ keyword.operator), keyword.operator.word",
+            "foreground": "var(purple2)"
+        },
+        {
+            "name": "Annotation Punctuation",
+            "scope": "punctuation.definition.annotation",
+            "foreground": "var(red2)"
+        },
+        {
+            "name": "JavaScript Dollar",
+            "scope": "variable.other.dollar.only.js",
+            "foreground": "var(red2)"
+        },
+        {
+            "name": "Storage",
+            "scope": "storage",
+            "foreground": "var(red2)"
+        },
+        {
+            "name": "Storage type",//function 语句
+            "scope": "storage.type",
+            "foreground": "var(purple2)",
+            "font_style": "regular"
+        },
+        {
+            "name": "Entity name",
+            "scope": "entity.name - (entity.name.filename | entity.name.section | entity.name.tag | entity.name.label)",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Inherited class",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(yellow2)",
+            "font_style": "italic underline"
+        },
+        {
+            "name": "Function argument",
+            "scope": "variable.parameter - (source.c | source.c++ | source.objc | source.objc++)",
+            "foreground": "var(blue)",
+            "font_style": "regular"
+        },
+        {
+            "name": "Function name",
+            "scope": "entity.name.function",
+            "foreground": "var(yellow)",
+            "font_style": "regular"
+        },
+        {
+            "name": "Language variable",
+            "scope": "variable.language",
+            "foreground": "var(orange)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Tag name",
+            "scope": "entity.name.tag",
+            "foreground": "var(red2)"
+        },
+        {
+            "name": "Tag attribute",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(yellow2)"
+        },
+        {//被调用函数颜色
+            "name": "Function call",
+            "scope": "variable.function, variable.annotation",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Library function",
+            "scope": "support.function, support.macro",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Library constant",
+            "scope": "support.constant",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Library class/type",
+            "scope": "support.type, support.class",
+            "foreground": "var(blue)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Library variable",
+            "scope": "support.other.variable"
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid",
+            "foreground": "var(white2)",
+            "background": "var()"
+        },
+        {
+            "name": "Invalid deprecated",
+            "scope": "invalid.deprecated",
+            "foreground": "var(white2)",
+            "background": "var(purple)"
+        },
+        {
+            "name": "JSON String",
+            "scope": "meta.structure.dictionary.json string.quoted.double.json",
+            "foreground": "var(yellow3)"
+        },
+        {
+            "name": "YAML String",
+            "scope": "string.unquoted.yaml",
+            "foreground": "var(white3)"
+        },
+        {
+            "name": "diff.header",
+            "scope": "meta.diff, meta.diff.header",
+            "foreground": "var(yellow5)"
+        },
+        {
+            "name": "markup headings",
+            "scope": "markup.heading",
+            "font_style": "bold"
+        },
+        {
+            "name": "markup headings",
+            "scope": "markup.heading punctuation.definition.heading",
+            "foreground": "var(orange)"
+        },
+        {
+            "name": "markup h1",
+            "scope": "markup.heading.1 punctuation.definition.heading",
+            "foreground": "var(red2)"
+        },
+        {
+            "name": "markup links",
+            "scope": "markup.underline.link",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "markup bold",
+            "scope": "markup.bold",
+            "font_style": "bold"
+        },
+        {
+            "name": "markup italic",
+            "scope": "markup.italic",
+            "font_style": "italic"
+        },
+        {
+            "name": "markup bold/italic",
+            "scope": "markup.italic markup.bold | markup.bold markup.italic",
+            "font_style": "bold italic"
+        },
+        {
+            "name": "markup hr",
+            "scope": "punctuation.definition.thematic-break",
+            "foreground": "var(yellow5)"
+        },
+        {
+            "name": "markup blockquote",
+            "scope": "markup.quote punctuation.definition.blockquote",
+            "foreground": "var(yellow5)"
+        },
+        {
+            "name": "markup bullets",
+            "scope": "markup.list.numbered.bullet",
+            "foreground": "var(purple)"
+        },
+        {
+            "name": "markup bullets",
+            "scope": "markup.list.unnumbered.bullet | (markup.list.numbered punctuation.definition)",
+            "foreground": "color(var(white) alpha(0.67))"
+        },
+        {
+            "name": "markup code",
+            "scope": "markup.raw",
+            "background": "color(var(white) alpha(0.094))"
+        },
+        {
+            "name": "markup punctuation",
+            "scope": "markup.raw punctuation.definition.raw",
+            "foreground": "color(var(white) alpha(0.67))"
+        },
+        {
+            "name": "markup punctuation",
+            "scope": "text & (punctuation.definition.italic | punctuation.definition.bold | punctuation.definition.raw | punctuation.definition.link | punctuation.definition.metadata | punctuation.definition.image | punctuation.separator.table-cell | punctuation.section.table-header | punctuation.definition.constant)",
+            "foreground": "color(var(white) alpha(0.67))"
+        },
+        {
+            "name": "diff.deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(red2)"
+        },
+        {
+            "name": "diff.inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(yellow2)"
+        },
+        {
+            "name": "diff.changed",
+            "scope": "markup.changed",
+            "foreground": "var(yellow)"
+        },
+        {
+            "scope": "constant.numeric.line-number.find-in-files - match",
+            "foreground": "color(var(purple) alpha(0.63))"
+        },
+        {
+            "scope": "entity.name.filename",
+            "foreground": "var(yellow)"
+        },
+        {
+            "scope": "message.error",
+            "foreground": "var(red)"
+        },
+
+        {
+            "scope": "diff.deleted",
+            "background": "hsla(338, 50%, 56%, 0.15)",
+            "foreground_adjust": "l(+ 5%)"
+        },
+        {
+            "scope": "diff.deleted.char",
+            "background": "hsla(338, 65%, 56%, 0.30)",
+            "foreground_adjust": "l(+ 10%)"
+        },
+        {
+            "scope": "diff.inserted",
+            "background": "hsla(80, 50%, 53%, 0.15)",
+            "foreground_adjust": "l(+ 5%)"
+        },
+        {
+            "scope": "diff.inserted.char",
+            "background": "hsla(80, 65%, 53%, 0.30)",
+            "foreground_adjust": "l(+ 10%)"
+        },
+    ]
+}
